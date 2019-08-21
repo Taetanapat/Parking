@@ -8,12 +8,91 @@
         tools:context=".MainActivity">
 
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/app_name"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginTop="@dimen/margin_wide"
+            android:fontFamily="@font/roboto" android:textSize="@dimen/box_text_size" style="@style/whiteBox"
+            android:background="@color/colorPrimary" android:id="@+id/textView18"/>
+    <TextView
+            android:text="@string/parking2_text"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/parking2_text" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" style="@style/whiteBox"
+            android:background="@color/colorAccent" android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/parking1_text" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/parking3_text"/>
+    <TextView
+            android:text="@string/parking3_text"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/parking3_text" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" style="@style/whiteBox"
+            android:background="@color/colorAccent" android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/parking2_text" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="@string/parking1_text"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/parking1_text" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" style="@style/whiteBox"
+            android:background="@color/colorAccent" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/parking2_text"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/license_edit_text" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/parking2_text" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/car_brand_edit_text" android:hint="@string/license_hint"
+            android:text="@string/license_text"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/car_brand"
+            android:ems="10"
+            android:id="@+id/car_brand_edit_text" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/license_edit_text" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/name_edit_text" android:hint="@string/car_brand_hint"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/owner_name"
+            android:ems="10"
+            android:id="@+id/name_edit_text" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/car_brand_edit_text" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/update_button" android:hint="@string/owner_name_hint"/>
+    <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/update_button" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/name_edit_text" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/delete_button" android:text="@string/update_button"/>
+    <Button
+            android:text="@string/delete_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_button" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/name_edit_text" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" app:layout_constraintStart_toEndOf="@+id/update_button"
+            app:layout_constraintHorizontal_bias="0.5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
