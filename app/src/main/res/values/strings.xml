@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Parking</string>
-    <string name="parking1_text">Available</string>
-    <string name="parking2_text">Available</string>
-    <string name="parking3_text">Available</string>
+    <string name="parking1_text">Empty</string>
+    <string name="parking2_text">Empty</string>
+    <string name="parking3_text">Empty</string>
     <string name="update_button">Update</string>
     <string name="delete_button">Delete</string>
     <string name="license_text"></string>

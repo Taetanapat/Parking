@@ -1,5 +1,5 @@
 package com.example.parking
 
-data class Car(var Register: String = "" , var CarBrand: String = "" , var name: String = ""){
+data class Car(var License: String = "" , var CarBrand: String = "" , var name: String = ""){
 
 }
